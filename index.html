@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault - Revolutionizing Blockchain Crowdfunding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles if needed */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #1f2937; /* Dark gray text */
+        }
+        /* Style for FAQ accordion */
+        .faq-item summary {
+            cursor: pointer;
+            padding: 1rem;
+            background-color: #e5e7eb; /* Lighter gray for question */
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+            list-style: none; /* Remove default marker */
+            position: relative;
+            padding-right: 2.5rem; /* Space for icon */
+        }
+        .faq-item summary:hover {
+            background-color: #d1d5db; /* Slightly darker on hover */
+        }
+        .faq-item summary::after { /* Custom dropdown icon */
+            content: '+';
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .faq-item[open] summary::after {
+            content: '-';
+        }
+        .faq-item div {
+            padding: 1rem;
+            background-color: #ffffff; /* White background for answer */
+            border: 1px solid #e5e7eb;
+            border-top: none;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        /* Pool Card Styling */
+        .pool-card {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6); /* Indigo to Purple gradient */
+            color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .pool-card h3 {
+            font-size: 1.25rem; /* lg */
+            font-weight: 700; /* bold */
+            margin-bottom: 0.5rem;
+        }
+        .pool-card p {
+            font-size: 0.875rem; /* sm */
+            opacity: 0.9;
+        }
+        .pool-card span {
+            font-weight: 600; /* semibold */
+        }
+         /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #4f46e5; /* Indigo */
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #4f46e5; /* Indigo */
+            border: 1px solid #4f46e5;
+        }
+        .btn-secondary:hover {
+            background-color: #e0e7ff; /* Light Indigo */
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">Vault</div>
+            <div class="space-x-4">
+                <a href="#get-started" class="btn btn-primary">Get Started</a>
+                <a href="#login" class="btn btn-secondary">Login</a>
+                </div>
+        </nav>
+    </header>
+
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Revolutionizing Blockchain Crowdfunding</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90">Empowering Your funds with Secure Blockchain Technology</p>
+            <p class="text-md md:text-lg mb-10 max-w-3xl mx-auto">Vault is an innovative, blockchain-based crowdfunding platform designed to empower stakeholders and entrepreneurs alike.</p>
+            <a href="#get-started" class="btn bg-white text-indigo-600 hover:bg-gray-100 px-8 py-3 text-lg">Get Started</a>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">How <span class="text-indigo-600">Vault</span> Works</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                Vault is a cutting-edge multi-level marketing (MLM) platform designed to maximize your earnings through two powerful structures: AutoPools and Vault. Whether you’re looking for automated growth or a secure way to hold and grow your funds, Vault provides a seamless experience with transparent and automated earning mechanisms.
+            </p>
+
+            <div class="mb-16">
+                <h3 class="text-2xl md:text-3xl font-semibold text-center mb-4 text-indigo-600">AutoPools</h3>
+                <p class="text-center text-gray-600 mb-10">Structured Growth with Automated Earnings</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                    <div class="pool-card">
+                        <h3>Pool 1 Novice</h3>
+                        <p>Joining: <span>$10 USD</span></p>
+                        <p>Earning: <span>Unlimited</span></p>
+                    </div>
+                    <div class="pool-card">
+                        <h3>Pool 2 Apprentice</h3>
+                        <p>Joining: <span>$20 USD</span></p>
+                        <p>Earning: <span>$90 USD</span></p>
+                    </div>
+                    <div class="pool-card">
+                        <h3>Pool 3 Adept</h3>
+                        <p>Joining: <span>$40 USD</span></p>
+                        <p>Earning: <span>$180 USD</span></p>
+                    </div>
+                    <div class="pool-card">
+                        <h3>Pool 4 Journeyman</h3>
+                        <p>Joining: <span>$60 USD</span></p>
+                        <p>Earning: <span>$270 USD</span></p>
+                    </div>
+                     <div class="pool-card">
+                        <h3>Pool 5 Specialist</h3>
+                        <p>Joining: <span>$100 USD</span></p>
+                        <p>Earning: <span>$450 USD</span></p>
+                    </div>
+                    <div class="pool-card">
+                        <h3>Pool 6 Expert</h3>
+                        <p>Joining: <span>$200 USD</span></p>
+                        <p>Earning: <span>$900 USD</span></p>
+                    </div>
+                    <div class="pool-card">
+                        <h3>Pool 7 Elite</h3>
+                        <p>Joining: <span>$400 USD</span></p>
+                        <p>Earning: <span>$1800 USD</span></p>
+                    </div>
+                     <div class="pool-card">
+                        <h3>Pool 8 Master</h3>
+                        <p>Joining: <span>$600 USD</span></p>
+                        <p>Earning: <span>$2700 USD</span></p>
+                    </div>
+                     <div class="pool-card">
+                        <h3>Pool 9 Grand Master</h3>
+                        <p>Joining: <span>$1000 USD</span></p>
+                        <p>Earning: <span>$4500 USD</span></p>
+                    </div>
+                     <div class="pool-card">
+                        <h3>Pool 10 Champion</h3>
+                        <p>Joining: <span>$2000 USD</span></p>
+                        <p>Earning: <span>$9000 USD</span></p>
+                    </div>
+                     <div class="pool-card">
+                        <h3>Pool 11 Hero</h3>
+                        <p>Joining: <span>$5000 USD</span></p>
+                        <p>Earning: <span>$22.5K USD</span></p>
+                    </div>
+                     <div class="pool-card">
+                        <h3>Pool 12 Legend</h3>
+                        <p>Joining: <span>$10K USD</span></p>
+                        <p>Earning: <span>$45K USD</span></p>
+                    </div>
+                     <div class="pool-card">
+                        <h3>Pool 13 Mythic</h3>
+                        <p>Joining: <span>$20K USD</span></p>
+                        <p>Earning: <span>$90K USD</span></p>
+                    </div>
+                     <div class="pool-card">
+                        <h3>Pool 14 Ascendant</h3>
+                        <p>Joining: <span>$50K USD</span></p>
+                        <p>Earning: <span>$225K USD</span></p>
+                    </div>
+                     <div class="pool-card">
+                        <h3>Pool 15 Eternal</h3>
+                        <p>Joining: <span>$100K USD</span></p>
+                        <p>Earning: <span>$450K USD</span></p>
+                    </div>
+                    </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl md:text-3xl font-semibold text-center mb-4 text-purple-600">Staking</h3>
+                <p class="text-center text-gray-600 mb-10">Secure, Flexible & Daily Earnings</p>
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div class="text-gray-700 space-y-4">
+                        <p>USDT BEP20 staking allows users to earn passive income by locking their USDT (BEP20) tokens in a staking platform or smart contract. Unlike traditional staking, which involves volatile cryptocurrencies, USDT staking provides stable and predictable rewards without price fluctuations. Since USDT is a stablecoin pegged to the US dollar, investors can enjoy staking benefits without worrying about market volatility. This makes it an attractive option for those seeking a low-risk way to grow their crypto holdings while taking advantage of Binance Smart Chain’s low fees and fast transaction speeds.</p>
+                        <ul class="list-none space-y-2">
+                            <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Flexible & Fixed Staking Options – Choose between flexible staking for easy withdrawals or fixed-term staking for higher returns over a locked period.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Up to 1.5% Daily Rewards – Earn passive income by staking your funds at Vault.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Unlimited Staking – No restrictions on the maximum amount you can stake.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-gray-100 p-8 rounded-lg shadow-inner">
+                         <h4 class="text-xl font-semibold mb-4 text-gray-800">Team Bonuses – Earn Beyond Your Own Holdings</h4>
+                         <p class="text-gray-700 mb-4">Vault not only rewards your individual stakings but also offers team bonuses up to 7 levels deep, making it a true passive income opportunity.</p>
+                         <ul class="list-none space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Earn bonus rewards from your team's flexible or fixed stakings.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Get paid up to 7 levels deep, ensuring continuous growth.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> The bigger your network, the higher your rewards.</li>
+                         </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose <span class="text-indigo-600">Vault?</span></h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2 text-indigo-600">Automated & Transparent</h4>
+                    <p class="text-gray-600">No manual processes, no hidden fees.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2 text-indigo-600">Flexible & Profitable</h4>
+                    <p class="text-gray-600">Earn daily profits on your stakings without restrictions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2 text-indigo-600">Unlimited Growth</h4>
+                    <p class="text-gray-600">No cap on earnings or team bonuses.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2 text-indigo-600">Instant Withdrawals</h4>
+                    <p class="text-gray-600">Withdraw anytime with lightning fast transactions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2 text-indigo-600">Multiple Earning Streams</h4>
+                    <p class="text-gray-600">Combine Stake earnings with team bonuses for maximum income.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2 text-indigo-600">Secure Platform</h4>
+                    <p class="text-gray-600">Built on secure blockchain technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-started" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">How to Get <span class="text-indigo-600">Started</span></h2>
+             <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Getting started with Vault is simple and hassle-free. Follow these easy steps to begin your journey toward daily rewards and unlimited earning potential:</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                    <h4 class="text-xl font-semibold mb-2">Create an Account</h4>
+                    <p class="text-gray-600 text-sm">Sign up on vaulte.io with your email and create a secure password. Verify your account via email.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                     <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                    <h4 class="text-xl font-semibold mb-2">Deposit Funds</h4>
+                    <p class="text-gray-600 text-sm">Join Autopools (starting $10) or deposit in Vault (from $1) to start earning.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                     <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                    <h4 class="text-xl font-semibold mb-2">Start Earning</h4>
+                    <p class="text-gray-600 text-sm">Earn from Autopools placements or get up to 1.5% daily rewards from Vault staking.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                     <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                    <h4 class="text-xl font-semibold mb-2">Withdraw Anytime</h4>
+                    <p class="text-gray-600 text-sm">Withdraw Autopool earnings (10% fee) or Vault capital (no fee) instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 md:py-24 bg-indigo-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Key <span class="text-indigo-600">Features</span></h2>
+             <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">Vault provides a secure, automated, and high-reward earning system. With instant withdrawals, 24/7 support, and multiple income streams, you can grow your wealth effortlessly! 🚀</p>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-3 text-indigo-600">Trusted & Secure</h4>
+                    <ul class="list-none space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Safe & Transparent – Built with secure transactions and automated processes.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> No Hidden Rules – 100% transparent system for fair earnings.</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-3 text-indigo-600">Instant Withdrawals</h4>
+                     <ul class="list-none space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Withdraw your capital anytime without any charges.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Autopool & bonus withdrawals are processed instantly with a 10% fee.</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-3 text-indigo-600">24/7 Customer Support</h4>
+                     <ul class="list-none space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Get assistance anytime with dedicated support.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Live chat & email support for quick issue resolution.</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-3 text-indigo-600">Multiple Earning Streams</h4>
+                     <ul class="list-none space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Earn daily profits from Vault and placement-based earnings from Autopools.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Up to 7-level deep team bonuses for extra income.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-3 text-indigo-600">Fully Automated System</h4>
+                     <ul class="list-none space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> No manual placements – Autopools work on a 2x2 matrix for structured growth.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Vault rewards are credited automatically every 24 hours.</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-3 text-indigo-600">Low Entry, High Rewards</h4>
+                     <ul class="list-none space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Start with just $1 in Vault or $10 in Pool 1.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✔️</span> Scale up earnings by upgrading pools or staking more in Vault.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">📲 Download the <span class="font-extrabold">Vault App</span></h2>
+            <p class="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">Get seamless access to your earnings anytime, anywhere! Download our app for instant withdrawals, real-time tracking, and a smooth user experience. 🚀</p>
+            <div class="flex justify-center space-x-4">
+                 <a href="#" class="inline-block bg-white text-gray-800 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+                    Download on the App Store
+                 </a>
+                 <a href="#" class="inline-block bg-black text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-800 transition duration-300">
+                     Get it on Google Play
+                 </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">FAQs</h2>
+            <p class="text-center text-gray-600 mb-10">Explore our FAQs for fast, informative answers to frequently asked questions and common concerns.</p>
+            <div class="space-y-4">
+                <details class="faq-item group">
+                    <summary class="flex justify-between items-center">How do I get started?</summary>
+                    <div class="text-gray-700">
+                        Sign up on vaulte.io, verify your email, deposit funds into Autopools (starting $10) or Vault (starting $1), and begin earning rewards.
+                    </div>
+                </details>
+                <details class="faq-item group">
+                    <summary class="flex justify-between items-center">How do Autopools work?</summary>
+                    <div class="text-gray-700">
+                        Autopools use an automated 2x2 matrix. You join Pool 1 for $10. From Pool 2 onwards, you earn 100% of the joining amount from members placed in your second level. Earnings from one pool help you upgrade to the next.
+                    </div>
+                </details>
+                 <details class="faq-item group">
+                    <summary class="flex justify-between items-center">How does Vault work?</summary>
+                    <div class="text-gray-700">
+                        Vault allows you to stake USDT BEP20 (starting from $1) and earn up to 1.5% daily rewards. You can choose flexible staking (withdraw anytime) or fixed-term staking (higher rewards, locked period). Capital can be withdrawn anytime without fees.
+                    </div>
+                </details>
+                 <details class="faq-item group">
+                    <summary class="flex justify-between items-center">Can I withdraw my funds anytime?</summary>
+                    <div class="text-gray-700">
+                        Yes. You can withdraw your staked capital from Vault anytime without charges. Autopool earnings and team bonuses can also be withdrawn anytime but incur a 10% fee.
+                    </div>
+                </details>
+                 <details class="faq-item group">
+                    <summary class="flex justify-between items-center">What is the minimum deposit to start?</summary>
+                    <div class="text-gray-700">
+                        The minimum to start is $10 for Autopool 1 or $1 for Vault staking.
+                    </div>
+                </details>
+                 <details class="faq-item group">
+                    <summary class="flex justify-between items-center">How do I earn from my team?</summary>
+                    <div class="text-gray-700">
+                       You earn team bonuses based on the staking activities (flexible or fixed) of members in your network, up to 7 levels deep. The larger your network, the higher your potential bonus rewards.
+                    </div>
+                </details>
+            </div>
+            <p class="text-center text-gray-600 mt-10">
+                Can't see your question listed above?
+                <a href="#contact" class="text-indigo-600 hover:underline font-semibold">Contact Us</a>
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-4">Vault</h4>
+                    <p class="text-sm mb-4">Vault is an innovative, blockchain-based crowdfunding platform designed to empower stakeholders and entrepreneurs alike.</p>
+                    <h5 class="text-lg font-semibold text-white mb-2">Subscribe</h5>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="w-full px-3 py-2 rounded-l-md text-gray-800 focus:outline-none">
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-r-md">Go</button>
+                    </form>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Company</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#register" class="hover:text-white hover:underline">Register</a></li>
+                        <li><a href="#login" class="hover:text-white hover:underline">Login</a></li>
+                        <li><a href="#contact" class="hover:text-white hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Security</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#privacy" class="hover:text-white hover:underline">Privacy Policy</a></li>
+                        <li><a href="#terms" class="hover:text-white hover:underline">Terms and Conditions</a></li>
+                        <li><a href="#presentation" class="hover:text-white hover:underline">Business Presentation</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Connect</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p class="mb-2">Copyright 2025 - 2035 | Vault All Rights Reserved.</p>
+                <p>
+                    <a href="#privacy" class="hover:text-white hover:underline">Privacy Policy</a> |
+                    <a href="#terms" class="hover:text-white hover:underline">Terms and Conditions</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to potentially handle FAQ interactions if needed,
+        // though <details> works natively.
+        document.addEventListener('DOMContentLoaded', () => {
+            // You could add JS for animations or dynamic content loading here.
+            console.log("Vault page loaded");
+        });
+    </script>
+
+</body>
+</html>
